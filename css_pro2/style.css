@@ -124,7 +124,15 @@ body {
     display: flex;
     overflow-x: auto;
 }
-.image-content ::-webkit-scrollbar{
+.image-content {
+    /* Works on Firefox */
+    scrollbar-width: none;
+    /* Works on Internet Explorer 10+ */
+    -ms-overflow-style: none;
+}
+
+.image-content::-webkit-scrollbar {
+    /* Works on Chrome, Edge, and Safari */
     display: none;
 }
 
