@@ -174,9 +174,10 @@ body {
 
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
     .nav {
         height: 11vh;
+        margin-top: 32px;
     }
 
     .nav i {
@@ -192,5 +193,70 @@ body {
         width: 12vw;
         height: 3px;
     }
+
+    .main_text h1 {
+        font-size: 20vw;
+        line-height: 8vh;
+        white-space: nowrap;
+    }
+
+    .row h4 {
+        font-size: 6vw;
+        /* line-height: 2vh; */
+    }
+
+    .row h4:nth-child(2) {
+        font-weight: 500;
+        font-size: 5vw;
+    }
+
+    #carimg1 {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 115vw;
+    }
+
+    #carimg2,
+    #carimg3 {
+        display: none;
+    }
+
+    .bottom {
+        height: 234px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .bottom p {
+        font-size: 3.5vw;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0 5vw;
+    }
+
+.bottom button {
+    padding: 3vw 10vw;
+    font-size: 4vw;
+    border-radius: 12vw;
+    margin-bottom: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
