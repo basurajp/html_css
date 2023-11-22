@@ -10,31 +10,27 @@ html , body{
     /* background-color: red; */
 }
 .main{
-    height: 100%;
-    min-height: 100vh;
-
-}
-
-.nav{
-    height: 9vh;
     width: 100%;
-    /* background-color: red; */
-}
-
-.nav{
+    height: 100%;
+    background-color: rgb(19, 1, 1);
     display: flex;
     align-items: center;
-   padding: 0 10vw; 
-    border-bottom: 1px solid rgb(85, 80, 80);
+    justify-content: center;
+    
 }
-.nav i {
-    margin-right:5px;
-    padding: 1px;
+
+h1{
+    color: white;
+
+    
 }
-h4{
-    font-size: 2.5vw ;
-    /* margin-left: 3vw; */
-    padding: 0 10vw; 
-    margin-top: 3vw;
+.cursor{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    mix-blend-mode: difference;
+    transition: all ;
 
 }
