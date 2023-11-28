@@ -9,16 +9,23 @@
 
 <body>
     <h1> checking the Java asyc </h1>
-    <button>Stop</button>
+    <button id="stop">Stop</button>
 
     <script>
-        let sayName = function () {
-            document.querySelector('h1').innerHTML = 'Data changed after 2 second '
+        let changeH1 = function changeH1() {
+            document.querySelector('h1').innerHTML = 'Data is changed '
         }
+        let cleartime = setTimeout(changeH1, 2000)
 
-        setTimeout(sayName, 200)
+        document.querySelector('#stop').addEventListener('click', function () {
+            clearTimeout(cleartime)
+            console.log('stopped');
+        })
+
 
     </script>
+
+
 </body>
 
 </html>
