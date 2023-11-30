@@ -156,8 +156,8 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 14%;
-    top: 40%;
+    right: -15%;
+    top: 30%;
 }
 
 .rotate{
