@@ -10,36 +10,71 @@ html,
 body {
     height: 100%;
     width: 100%;
+    font-style: 62.25%;
 }
 
 .main {
-    height: 100%;
-    width: 100%;
-    background-color: #9980FA;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 207, 219);
 }
 
-.qo-box {
-    height: 70%;
-    width: 60%;
-    background-color: white;
-    border-radius: 10px;
-    padding: 2vw;
+.inner-div {
+    width: 40vw;
+    background-color: #fff;
+    padding: 30px 80px;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
 }
 
-.option{
-    width: fit-content;
-    padding: 1vw 3vw 1vw 0.5vh;
-   margin: 1vw 0 1vw 0;
-   border: 1px solid black ;
-   border-radius: 3vh;
+.inner-div h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
 }
-button{
-    padding: 10px;
-    border-radius: 5px;
-    border:none;
-    background-color: black;
-    color: white;
+
+.inner-div li {
+    font-size: 1.5rem;
+    list-style: none;
+    margin-top: .5rem;
+    /* cursor: pointer; */
+}
+
+input {
+    cursor: pointer;
+}
+
+#submit,
+.btn {
+    padding: 0.8rem 3rem;
+    outline: none;
+    font-size: 1.5rem;
+    display: block;
+    margin: auto;
+    border: none;
+    text-transform: uppercase;
+    background-color: #00a8ff;
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+
+#submit:hover {
+    background-color: #0097e6;
+}
+
+#showScore {
+    background-color: #a0acbd;
+    margin-top: 2rem;
+    padding: 2rem 4rem;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
+
+}
+
+.scoreArea {
+    display: none;
 }

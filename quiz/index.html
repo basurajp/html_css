@@ -10,36 +10,38 @@
 
 <body>
     <div class="main">
-        <div class="qo-box">
-            <h1 id="question">Question</h1>
-            <hr>
-            <form id="quizForm">
-
-                <div class="option">
-                    <input type="radio" id="option1-radio" class='radio' name="quizOption">
-                    <label for="option1">Option 1</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="option2-radio" class='radio' name="quizOption">
-                    <label for="option2">Option 2</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="option3-radio" class='radio' name="quizOption">
-                    <label for="option3">Option 3</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="option4-radio" class='radio' name="quizOption">
-                    <label for="option4">Option 4</label>
-                </div>
-
-                <button type="button" id="btn">Submit</button>
-            </form>
+        <div class="inner-div">
+            <h2 class="question">Question Here </h2>
+            <ul>
+                <li>
+                    <input type="radio" name="ans" id="ans1" class="ans">
+                    <label for="ans1" id="opt1"> option1 1</label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="radio" name="ans" id="ans2" class="ans">
+                    <label for="ans2" id="opt2"> option1 1</label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="radio" name="ans" id="ans3" class="ans">
+                    <label for="ans3" id="opt3"> option1 1</label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="radio" name="ans" id="ans4" class="ans">
+                    <label for="ans4" id="opt4"> option1 1</label>
+                </li>
+            </ul>
+            <button id="submit">Submit </button>
+            <div id="showScore" class="scoreArea"></div>
         </div>
     </div>
 
 
-
     <script src="script.js"></script>
 </body>
-
 </html>
