@@ -25,6 +25,7 @@ nav {
     justify-content: end;
     gap: 2vw;
     padding: 0 2vw;
+    
 }
 
 nav i {
@@ -32,9 +33,17 @@ nav i {
     background-color: black;
     padding: 0.5vw;
     border-radius: 50%;
+  
    
 
 }
+#ham-menu {
+display: inline;
+border-radius: 5px;
+display: none;
+}
+
+
 
 h1 {
     margin: 3vw 8vw;
@@ -86,3 +95,43 @@ img {
     object-position: top;
     height: 50%;
 }
+
+@media (max-width:600px) {
+    nav h4  {
+        display: none;
+    }
+#bag{
+    display: none;
+}
+
+   #ham-menu{
+    display: inline;
+    font-size: 3vh;
+   }
+
+h1{
+    font-size: 8vw;
+    line-height: 9.7vw;
+}
+.center{
+    flex-direction: column;
+    gap: 2vh;
+
+}
+.center p{
+    font-size: 3.3vw;
+    font-weight: 600;
+}
+.rightbox{
+    width: 100%;
+    font-size: 2.2vh;
+    font-weight: 600;
+    
+}
+
+
+
+}
+
+
+
