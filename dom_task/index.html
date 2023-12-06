@@ -41,21 +41,6 @@
         let btn = document.querySelector('#btn')
         let h5 = document.querySelector('h5')
 
-        btn.addEventListener('click', function (e) {
-            e.preventDefault()
-            for (let i = 0; i <= inps.length; i++) {
-                if (inps[i].value.trim() === '') {
-                    h5.textContent = 'Some Field are Empty '
-                    h5.style.color = 'red'
-                    break
-                }
-                else {
-                    h5.textContent = 'form submited'
-                    h5.style.color = 'green'
-                    
-                }
-            }
-        })
 
 
 
