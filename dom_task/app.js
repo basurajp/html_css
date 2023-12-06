@@ -1,18 +1,18 @@
-let h1 = document.querySelector("h1");
+var tab = document.querySelectorAll(".tab");
+var h3 = document.querySelectorAll("h3");
+var home_text = document.querySelector("#home_text");
 
-let start = document.querySelector("#start");
-let stop = document.querySelector("#stop");
-let count = 0;
-let int;
+home_text.style.display = "block";
 
-start.addEventListener("click", function () {
-  int = setInterval(function () {
-    h1.textContent = count;
-    count++;
-  }, 1000);
-});
+function hide_all_data() {
+  h3.forEach(function (elem) {
+    elem.style.display = "none";
+  });
+}
 
-stop.addEventListener("click", function () {
-  clearInterval(int);
-  
+tab.forEach(function (elem, index) {
+  elem.addEventListener("click", function () {
+    hide_all_data();
+    h3[index].style.display = "block";
+  });
 });
