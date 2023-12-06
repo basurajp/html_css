@@ -1,22 +1,18 @@
-let ul = document.querySelector("ul");
-let inp = document.querySelector("input");
-let add = document.querySelector("#add");
-let remove = document.querySelector("#remove");
+let h1 = document.querySelector("h1");
 
-let li;
+let start = document.querySelector("#start");
+let stop = document.querySelector("#stop");
+let count = 0;
+let int;
 
-add.addEventListener("click", function () {
-  if (inp.value == "") {
-  } else {
-    li = document.createElement("li");
-    li.textContent = inp.value;
-    ul.appendChild(li);
-    inp.value = "";
-  }
+start.addEventListener("click", function () {
+  int = setInterval(function () {
+    h1.textContent = count;
+    count++;
+  }, 1000);
 });
 
-remove.addEventListener("click", function () {
-  if (ul.childElementCount > 0) {
-    ul.removeChild(ul.lastElementChild);
-  }
+stop.addEventListener("click", function () {
+  clearInterval(int);
+  
 });
