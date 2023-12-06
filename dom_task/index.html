@@ -37,10 +37,31 @@
     </form>
 
     <script>
-        let inps = document.querySelectorAll('input[type="text"]')
-        let btn = document.querySelector('#btn')
-        let h5 = document.querySelector('h5')
+        let inps = document.querySelectorAll('input[type="text"]');
+        let btn = document.querySelector('#btn');
+        let h5 = document.querySelector('h5');
 
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let allFieldsFilled = true;
+
+            for (let i = 0; i < inps.length; i++) {
+                if (inps[i].value.trim() === '') {
+                    allFieldsFilled = false;
+                    break;
+                }
+            }
+
+            if (!allFieldsFilled) {
+                h5.innerHTML = 'Some fields are empty';
+                h5.style.color = 'red';
+            } else {
+                h5.innerHTML = 'Form submitted';
+                h5.style.color = 'green';
+
+            }
+        });
 
 
 
