@@ -4,62 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
 
-        form {
-            border: 1px solid black;
-            width: fit-content;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px auto;
-        }
-
-        input {
-            margin: 5px;
-            padding: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 
 <body>
-    <!-- 4 crete an unorder list .allow users to add and remove list item dynamically  -->
+  
     <!-- 5 : build a countdown timer that starts when a button is clicked and update the diplay in real time  -->
-    <ul>
+<div class="main">
 
-    </ul>
+        <ul>
 
-    <input type="text" placeholder="Ener the Task">
-    <button type="button" class="add">add</button>
-    <button type="button" class="remove">Remove</button>
+        </ul>
 
-    <script>
-        let inp = document.querySelector('input')
-        let add = document.querySelector('.add')
-        let remove = document.querySelector('.remove')
-        let ul = document.querySelector('ul')
-        let li;
 
-        add.addEventListener('click', function () {
-            li = document.createElement('li')
-            if (inp.value === '') { }
-            else {
-                li.textContent = inp.value
-                ul.appendChild(li)
-                inp.value = ''
-            }
+    <div class="box">
+        <input type="text"  placeholder="Enter the task"><br>
+        <button id="add" type="button">add</button>
+        <button id="remove" type="button"> remove</button>
+    </div>
 
-        })
 
-        remove.addEventListener('click', function () {
-            if (ul.children.length > 0) {
-                ul.removeChild(ul.lastChild)
-            }
-        })
-    </script>
+</div>
+
+
+
+
+
+
+
+ <script src="app.js"></script>
+
+    
+  
 </body>
 
 </html>
