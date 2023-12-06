@@ -131,3 +131,35 @@ span {
     object-fit: cover;
     object-position: center;
 }
+
+@media (max-width:600px) {
+   .nav1 h5 {
+    display: none;
+   }
+   .gola{
+    height: 40px;
+    width: 40px;
+   }
+   .nav2{
+overflow-x: auto;
+   }
+.nav2::-webkit-scrollbar{
+    display: none;
+}
+
+.elem{
+    width: 80%;
+    height: 100%;
+}
+.elem h1 {
+    font-size: 8vh;
+    white-space: nowrap;
+    margin-left: 5vh;
+}
+
+
+   .nav2 h5 {
+    font-size: 2vh;
+    font-weight: 600;
+   }
+}
