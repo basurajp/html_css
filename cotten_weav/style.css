@@ -19,9 +19,9 @@ body {
     height: 90%;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    /* align-items: center; */
+    padding-left: 10vw;
+
     gap: 6vw;
     padding-top: 12vw;
 
@@ -99,7 +99,7 @@ body {
     height: 100%;
     width: 30%;
     position: relative;
-    
+
 }
 
 .right-top {
@@ -142,7 +142,8 @@ body {
     font-size: 1.3vw;
 
 }
-.rotate{
+
+.rotate {
     position: absolute;
     top: 89%;
     font-size: 3vw;
@@ -151,3 +152,67 @@ body {
     transform-origin: 0;
 }
 
+@media (max-width:600px) {
+    .main {
+        flex-direction: column;
+        padding-left: 2vh;
+
+    }
+
+    .left {
+        width: 100%;
+
+    }
+
+    .left h1 {
+        font-size: 21vw;
+        line-height: 19vw
+    }
+
+    .colors h5 {
+        font-size: 3vh;
+        grid-area: ;
+    }
+
+    .colors {
+        gap: .5vw;
+    }
+
+    .grey {
+        height: 30px;
+        width: 30px;
+    }
+
+    .pink {
+        height: 30px;
+        width: 30px;
+    }
+
+    .left-bottom h2 {
+        font-size: 4vw;
+    }
+
+    .left-bottom p {
+        width: 80%;
+        font-size: 3vw;
+
+    }
+
+    .right {
+        width: 85%;
+    }
+
+    .right-top h5 {
+        font-size: 2.5vh;
+    }
+    .right img {
+        width: 100%;
+    }
+.gola {
+    right: -63px ;
+}
+
+.gola h5{
+    font-size: 2.2vh;
+}
+}
