@@ -26,45 +26,39 @@
 </head>
 
 <body>
-    <!-- task 3 : create a form with input field and a submit buttton . use javascript to validte from and display an error message if the input is invalid  -->
+    <!-- 4 crete an unorder list .allow users to add and remove list item dynamically  -->
+    <!-- 5 : build a countdown timer that starts when a button is clicked and update the diplay in real time  -->
+    <ul>
 
-    <form>
-        <h5></h5>
-        <input type="text" placeholder="Enter your name "> <br>
-        <input type="text" placeholder="Enter your email"> <br>
-        <input id="btn" type="submit" value="Submit ">
+    </ul>
 
-    </form>
+    <input type="text" placeholder="Ener the Task">
+    <button type="button" class="add">add</button>
+    <button type="button" class="remove">Remove</button>
 
     <script>
-        let inps = document.querySelectorAll('input[type="text"]');
-        let btn = document.querySelector('#btn');
-        let h5 = document.querySelector('h5');
+        let inp = document.querySelector('input')
+        let add = document.querySelector('.add')
+        let remove = document.querySelector('.remove')
+        let ul = document.querySelector('ul')
+        let li;
 
-        btn.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            let allFieldsFilled = true;
-
-            for (let i = 0; i < inps.length; i++) {
-                if (inps[i].value.trim() === '') {
-                    allFieldsFilled = false;
-                    break;
-                }
+        add.addEventListener('click', function () {
+            li = document.createElement('li')
+            if (inp.value === '') { }
+            else {
+                li.textContent = inp.value
+                ul.appendChild(li)
+                inp.value = ''
             }
 
-            if (!allFieldsFilled) {
-                h5.innerHTML = 'Some fields are empty';
-                h5.style.color = 'red';
-            } else {
-                h5.innerHTML = 'Form submitted';
-                h5.style.color = 'green';
+        })
 
+        remove.addEventListener('click', function () {
+            if (ul.children.length > 0) {
+                ul.removeChild(ul.lastChild)
             }
-        });
-
-
-
+        })
     </script>
 </body>
 
