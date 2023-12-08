@@ -1,21 +1,14 @@
-// Delete Object Property:
-// Write a function that takes an object and a property name as parameters and returns a new object with the specified property removed.
+// Immutable Object:
+// 
+let obj ={
+    fname :'basuraj',
+    lname :'poojari',
+    age :'23'
 
-function removeroperty(obj, prop_reomve) {
-  let newObj = { ...obj };
-  if (prop_reomve in newObj) {
-    delete newObj[prop_reomve];
-  } else {
-    console.log("property is not able ");
-  }
-
-  return newObj;
 }
 
-let obj = {
-  name: "basuraj",
-  age: 24,
-  gender: "male",
-};
+Object.freeze(obj)
 
-console.log(removeroperty(obj, "age"));
+delete obj.age
+
+console.log(obj)
