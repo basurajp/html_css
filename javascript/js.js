@@ -1,13 +1,13 @@
-// Currying:
-// Write a function that takes three parameters and returns the result of their sum using currying..
+// Array Splice and Slice:
+// Given an array, use splice to remove the second element and then use slice to create a new array without modifying the original.
 
-function sum(a) {
-  return function (b) {
-    return function (c) {
-      return a + b + c;
-    };
-  };
-}
+let Orginalarr = [1, 3, 5, 6, 7, 8];
 
-console.log(sum(1)(2)(3));
+Orginalarr.splice(1, 1);
+let newArr = Orginalarr.slice();
+
+console.log('Original array:', Orginalarr);
+console.log('New array:', newArr);
+
+
 
