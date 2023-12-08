@@ -1,13 +1,21 @@
-// Array Splice and Slice:
-// Given an array, use splice to remove the second element and then use slice to create a new array without modifying the original.
+// Delete Object Property:
+// Write a function that takes an object and a property name as parameters and returns a new object with the specified property removed.
 
-let Orginalarr = [1, 3, 5, 6, 7, 8];
+function removeroperty(obj, prop_reomve) {
+  let newObj = { ...obj };
+  if (prop_reomve in newObj) {
+    delete newObj[prop_reomve];
+  } else {
+    console.log("property is not able ");
+  }
 
-Orginalarr.splice(1, 1);
-let newArr = Orginalarr.slice();
+  return newObj;
+}
 
-console.log('Original array:', Orginalarr);
-console.log('New array:', newArr);
+let obj = {
+  name: "basuraj",
+  age: 24,
+  gender: "male",
+};
 
-
-
+console.log(removeroperty(obj, "age"));
