@@ -1,18 +1,9 @@
-var tab = document.querySelectorAll(".tab");
-var h3 = document.querySelectorAll("h3");
-var home_text = document.querySelector("#home_text");
+let textArea = document.querySelector('textarea')
+let span = document.querySelector('span')
 
-home_text.style.display = "block";
 
-function hide_all_data() {
-  h3.forEach(function (elem) {
-    elem.style.display = "none";
-  });
-}
 
-tab.forEach(function (elem, index) {
-  elem.addEventListener("click", function () {
-    hide_all_data();
-    h3[index].style.display = "block";
-  });
-});
+textArea.addEventListener('input',function(){
+  let length = textArea.value.length 
+  span.textContent = length
+})

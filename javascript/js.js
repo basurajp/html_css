@@ -1,14 +1,12 @@
-// Immutable Object:
-// 
-let obj ={
-    fname :'basuraj',
-    lname :'poojari',
-    age :'23'
+class Book {
+    constructor(name, author,pages){
+        this.name = name
+        this.author = author
+        this.pages = 200
 
+    }
+
+    describe(){
+        return `the booke name  is ${this.name} ,${this.a}`
+    }
 }
-
-Object.freeze(obj)
-
-delete obj.age
-
-console.log(obj)
