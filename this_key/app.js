@@ -1,20 +1,14 @@
-// Understanding the basic working of call Implement a JavaScript code snippet that demonstrates the usage of the call method. In the example, make sure you highlight how call can control the context of this.
+// Problem 1: Create a function Animal() using the prototype property and add two methods to it, move and eat.
 
+function Animal() {}
 
-let emp1 ={
-  firstname:'Saurbah',
-  lastname : 'nikkam'
+Animal.prototype.move = function () {
+  return "the animal is moved ";
+};
 
+Animal.prototype.eat = function () {
+  return "animal can eat ";
+};
 
-}
-
-let emp2 =  {
-  firstname :'basuraj',
-  lastname: 23,
-  fullNname:function(){
-    return ` full name is : ${this.firstname} ${this.lastname}`
-  }
-
-}
-
-console.log(emp2.fullNname.call(emp1))
+let ani1  = new Animal()
+console.log(ani1.move())
