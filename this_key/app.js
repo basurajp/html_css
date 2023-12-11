@@ -1,13 +1,16 @@
-// (Easy) Write a JavaScript function called Rectangle that takes two parameters: height and width. Use the this keyword to assign these parameters to the object's properties. Also, create a method called calculateArea() which calculates and returns the area of the rectangle.
+//  In JavaScript, a constructor function can be used to initialize new objects. Write a JavaScript program using constructor function to define a Person object with properties name and age. Use the this keyword and create a method to allow the Person object to introduce itself.
 
-function rectangle(height, width) {
-  this.height = height;
-  this.width = width;
-  this.calculateArea = function () {
-    return this.height * this.width;
-  };
+
+function Person (name, age ){
+  this.name  = name ;
+  this.age  = age ;
+  this.introduce  = function(){
+    console.log(`My name is ${this.name} and age is ${this.age}`)
+  }
+
+
 }
 
-var area = new rectangle(5, 4);
+let p1 = new Person('basuraj',23)
 
-console.log(area.calculateArea());
+p1.introduce()
