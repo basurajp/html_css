@@ -1,7 +1,20 @@
-// Create a nested object 'nestedObj' where an inner object 'innerObj' has a method 'print'. Inside 'print', log 'this' keyword and interpret the output.
-var nestedObj = {
-  innerObj: {
-    print: function() { console.log(this); }
-  }
+// Understanding the basic working of call Implement a JavaScript code snippet that demonstrates the usage of the call method. In the example, make sure you highlight how call can control the context of this.
+
+
+let emp1 ={
+  firstname:'Saurbah',
+  lastname : 'nikkam'
+
+
 }
-nestedObj.innerObj.print();
+
+let emp2 =  {
+  firstname :'basuraj',
+  lastname: 23,
+  fullNname:function(){
+    return ` full name is : ${this.firstname} ${this.lastname}`
+  }
+
+}
+
+console.log(emp2.fullNname.call(emp1))
