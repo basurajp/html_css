@@ -1,16 +1,15 @@
-//  In JavaScript, a constructor function can be used to initialize new objects. Write a JavaScript program using constructor function to define a Person object with properties name and age. Use the this keyword and create a method to allow the Person object to introduce itself.
+// Problem 4: (Medium) Write a JavaScript program that takes two arguments for a Book constructor: title and author. Use the this keyword to assign these parameters. Create a method called detail() which returns a string that includes both the book title and its author.
 
 
-function Person (name, age ){
-  this.name  = name ;
-  this.age  = age ;
-  this.introduce  = function(){
-    console.log(`My name is ${this.name} and age is ${this.age}`)
+function Book (title,author){
+  this.title = title ;
+  this.author = author ;
+  this.detail = function(){
+    return `Title is : ${this.title} and Author is : ${this.author}`
   }
-
 
 }
 
-let p1 = new Person('basuraj',23)
+let book1  = new Book('Rich dad poor dad ', 'Robert')
 
-p1.introduce()
+console.log(book1.detail());
