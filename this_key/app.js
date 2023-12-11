@@ -1,12 +1,13 @@
-// Problem 1:  You are trying to create a simple object in JavaScript and use the this keyword. Write a JavaScript program to create an object student with properties name and age using this keyword. Create a method display() in the student object, which will display the student's name and age.
+// (Easy) Write a JavaScript function called Rectangle that takes two parameters: height and width. Use the this keyword to assign these parameters to the object's properties. Also, create a method called calculateArea() which calculates and returns the area of the rectangle.
 
-let student = {
-  name : 'Basuraj',
-  age: 20 ,
- display: function(){
-  console.log(`Name : ${this.name} , Age : ${this.age}`)
- }
-
+function rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+  this.calculateArea = function () {
+    return this.height * this.width;
+  };
 }
 
-student.display()
+var area = new rectangle(5, 4);
+
+console.log(area.calculateArea());
