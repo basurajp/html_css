@@ -1,12 +1,4 @@
-class Book {
-    constructor(name, author,pages){
-        this.name = name
-        this.author = author
-        this.pages = 200
-
-    }
-
-    describe(){
-        return `the booke name  is ${this.name} ,${this.a}`
-    }
-}
+console.log("a");
+console.log("b");
+setTimeout(() => console.log("c"), 5000);
+console.log("d");
