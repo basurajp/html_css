@@ -1,14 +1,21 @@
-// Problem 1: Create a function Animal() using the prototype property and add two methods to it, move and eat.
+// Problem 2: Define a Bird() function and use Prototype Inheritance to inherit from Animal(). Then add a new method, fly.
 
 function Animal() {}
 
 Animal.prototype.move = function () {
-  return "the animal is moved ";
+  return "animla can move ";
 };
-
 Animal.prototype.eat = function () {
   return "animal can eat ";
 };
 
-let ani1  = new Animal()
-console.log(ani1.move())
+function Bird() {}
+
+Bird.prototype = new Animal();
+
+Bird.prototype.fly = function () {
+  return "bird can fly";
+};
+
+var bird = new Bird();
+console.log(bird.eat());
